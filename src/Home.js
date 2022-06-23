@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Stack from 'react-bootstrap/Stack'
 import { Link, Outlet } from 'react-router-dom'
 import LoadingIndicator from './LoadingIndicator'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -14,11 +15,14 @@ function Home() {
             <Link to="/" className="nav-link">
               Home
             </Link>
+            <Link to="/about-us" className="nav-link">
+              About Us
+            </Link>
             <Link to="/products" className="nav-link">
-              Products
+              View All
             </Link>
             <Link to="/products/new" className="nav-link">
-              New Product
+              Create
             </Link>
           </Nav>
           <Navbar.Text>
@@ -29,6 +33,7 @@ function Home() {
       <Stack gap={3} className="col-md-10 mx-auto mt-3">
         <Outlet />
       </Stack>
+      <Footer />
     </>
   )
 }
