@@ -6,15 +6,15 @@ import ProductForm from './ProductForm'
 import Product from './Product'
 import AboutUs from './AboutUs'
 import Footer from './Footer'
+import HomeDefault from './HomeDefault'
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route index element={<h1>Welcome</h1>} />
+            <Route index element={<HomeDefault />} />
             <Route path="products" element={<ProductList />}>
-              <Route index element={<p>Select a product for more details</p>} />
               <Route path="new" element={<ProductForm />} />
               <Route path=":productId/edit" element={<ProductForm />} />
               <Route path=":productId" element={<Product />} />

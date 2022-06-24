@@ -1,0 +1,69 @@
+import React from 'react'
+import ListGroup from 'react-bootstrap/ListGroup'
+import Stack from 'react-bootstrap/Stack'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import { useParams, useNavigate, Link } from 'react-router-dom'
+import { ProductContext } from './ProductContext'
+import { useContext, useState, useEffect } from 'react'
+import './HomeDefault.css'
+
+function HomeDefault() {
+ let navigate = useNavigate()
+
+ let { getProduct, deleteProduct } = useContext(ProductContext)
+ let [product, setProduct] = useState()
+ let [ error, setError ] = useState()
+
+ function handleDeleteProduct(id) {
+  deleteProduct(id)
+  navigate('/products')
+}
+
+ function productList(products) {
+  if (products === null) return
+  let { id, productName, image, price } = products
+
+  return products.map((product) => (
+
+
+    <Card className="align-self-start w-25">
+        <Card.Img
+          variant="top"
+          src={product.image} />
+        <Card.Body>
+          <Card.Title>{product.productName}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{price}</Card.Subtitle>
+          <Card.Text>
+            <span>{`$${product.price}`}</span>
+          </Card.Text>
+          <Link to={`/products/${id}/edit`} className="btn btn-secondary mx-3">
+            View
+          </Link>
+          <Link to={`/products/${id}/edit`} className="btn btn-primary mx-3">
+            Edit
+          </Link>
+          <Button variant="danger" onClick={handleDeleteProduct.bind(this, id)}>
+            Delete
+          </Button>
+        </Card.Body>
+      </Card>
+  ))
+}
+
+  return (
+    <div>
+      <Stack direction="vertical" gap={3}>
+      <h1>Products</h1>
+      <div className='container'>
+          <ProductContext.Consumer>
+            {({ products }) => productList(products)}
+          </ProductContext.Consumer>
+      </div>
+      </Stack>
+    </div>
+  )
+}
+
+export default HomeDefault
+

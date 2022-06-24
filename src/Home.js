@@ -5,13 +5,24 @@ import Stack from 'react-bootstrap/Stack'
 import { Link, Outlet } from 'react-router-dom'
 import LoadingIndicator from './LoadingIndicator'
 import Footer from './Footer'
+import './Home.css'
 
 function Home() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Nav className="me-auto">
+            <Navbar.Brand href="/">
+              <img
+                alt=""
+                src="https://images.unsplash.com/photo-1584837140804-599306fb37f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z29sZiUyMGJhbGx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{" "}
+              Dick's
+            </Navbar.Brand>
+          <Nav className="me-auto test22">
             <Link to="/" className="nav-link">
               Home
             </Link>
@@ -25,9 +36,6 @@ function Home() {
               Create
             </Link>
           </Nav>
-          <Navbar.Text>
-            <LoadingIndicator />
-          </Navbar.Text>
         </Container>
       </Navbar>
       <Stack gap={3} className="col-md-10 mx-auto mt-3">
@@ -39,4 +47,3 @@ function Home() {
 }
 
 export default Home
-
