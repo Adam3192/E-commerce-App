@@ -1,11 +1,10 @@
 import React from 'react'
-import ListGroup from 'react-bootstrap/ListGroup'
+import { useContext, useState } from 'react'
 import Stack from 'react-bootstrap/Stack'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { ProductContext } from './ProductContext'
-import { useContext, useState, useEffect } from 'react'
 import './HomeDefault.css'
 
 function HomeDefault() {

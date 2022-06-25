@@ -4,7 +4,7 @@ import Stack from 'react-bootstrap/Stack'
 function AboutUs() {
   return (
     <Stack direction="horizontal" gap={3}>
-      <Image src="https://images.unsplash.com/photo-1622482594949-a2ea0c800edd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z29sZiUyMGNvdXJzZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2n_HKF4t_P8vsCDn0mtCxGpuAw11TyLj4VQ&usqp=CAU" />
       <div>
         <h1>Welcome to our Company!</h1>
         <p>
