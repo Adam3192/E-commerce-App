@@ -37,23 +37,23 @@ function Home() {
             </Link>
           </Nav>
         </Container>
-          <Form className='style'>
-            <Form.Group>
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="productName"
-                placeholder="Search..."
-                // value={}
-                // onChange={}
-              />
-            </Form.Group>
-          </Form>
+        <Form className="style">
+          <Form.Group>
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="productName"
+              placeholder="Search..."
+              // value={}
+              // onChange={}
+            />
+          </Form.Group>
+        </Form>
       </Navbar>
-      <Stack gap={3} className="col-md-10 mx-auto mt-3">
-        <Outlet />
+      <Stack gap={3} className="col-md-10 mx-auto mt-3 mb-5">
+          <Outlet />
       </Stack>
-      <Footer />
+          <Footer />
     </>
   )
 }

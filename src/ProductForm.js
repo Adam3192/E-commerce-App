@@ -90,7 +90,7 @@ function ProductForm() {
         <Form.Label>Photo</Form.Label>
         <Form.Control
           type="text"
-          name="price"
+          name="image"
           value={image}
           onChange={handleChange}
         />

@@ -28,16 +28,10 @@ function ProductList(props) {
           <Card.Text>
             <span>{`$${product.price}`}</span>
           </Card.Text>
-          <Link
-            to={`/products/${product.id}/edit`}
-            className="btn btn-secondary mx-3"
-          >
+          <Link to={`/view/${product.id}`} className="btn btn-secondary mx-3">
             View
           </Link>
-          <Link
-            to={`/edit/${product.id}`}
-            className="btn btn-primary mx-3"
-          >
+          <Link to={`/edit/${product.id}`} className="btn btn-primary mx-3">
             Edit
           </Link>
           <Button
@@ -52,14 +46,14 @@ function ProductList(props) {
   }
 
   return (
-      <Stack direction="vertical" gap={3}>
-        <h1>Products</h1>
-        <div className="container">
-          <ProductContext.Consumer>
-            {({ products }) => productList(products)}
-          </ProductContext.Consumer>
-        </div>
-      </Stack>
+    <Stack direction="vertical" gap={3}>
+      <h1>Products</h1>
+      <div className="container">
+        <ProductContext.Consumer>
+          {({ products }) => productList(products)}
+        </ProductContext.Consumer>
+      </div>
+    </Stack>
   )
 }
 

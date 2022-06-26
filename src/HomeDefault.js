@@ -36,10 +36,10 @@ function HomeDefault() {
           <Card.Text>
             <span>{`$${product.price}`}</span>
           </Card.Text>
-          <Link to={`/products/${id}/edit`} className="btn btn-secondary mx-3">
+          <Link to={`/view/${product.id}`} className="btn btn-secondary mx-3">
             View
           </Link>
-          <Link to={`/products/${id}/edit`} className="btn btn-primary mx-3">
+          <Link to={`/edit/${product.id}`} className="btn btn-primary mx-3">
             Edit
           </Link>
           <Button variant="danger" onClick={handleDeleteProduct.bind(this, id)}>
