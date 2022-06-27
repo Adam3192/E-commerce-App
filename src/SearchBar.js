@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 
-
 const SearchBar = () => {
  const [searchInput, setSearchInput] = useState("");
- const countries = [
+ const products = [
   { name: "Belgium", continent: "Europe" },
   { name: "India", continent: "Asia" },
   { name: "Bolivia", continent: "South America" },
