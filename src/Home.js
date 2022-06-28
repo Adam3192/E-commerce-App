@@ -1,15 +1,27 @@
+import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import Stack from 'react-bootstrap/Stack'
 import Form from 'react-bootstrap/Form'
-import { Link, Outlet } from 'react-router-dom'
+import FormControl from 'react-bootstrap/FormControl'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import './Home.css'
+import SearchBar from './SearchBar'
 
 function Home() {
+  let navigate = useNavigate()
+
+  const handleChange = (e) => {
+    if (e.target.value === '') return
+    e.preventDefault()
+
+    navigate(`/${e.target.value}/search`)
+  }
+
   return (
-    <>
+    <div className='fullScreen'>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">
@@ -37,24 +49,22 @@ function Home() {
             </Link>
           </Nav>
         </Container>
-        <Form className="style">
-          <Form.Group>
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-              type="text"
-              name="productName"
-              placeholder="Search..."
-              // value={}
-              // onChange={}
-            />
-          </Form.Group>
+        {/* <SearchBar /> */}
+        <Form className="me-4">
+          <FormControl
+            onChange={handleChange}
+            type="search"
+            className="me-4"
+            placeholder="Search"
+            aria-label="search"
+          />
         </Form>
       </Navbar>
       <Stack gap={3} className="col-md-10 mx-auto mt-3 mb-5">
-          <Outlet />
+        <Outlet />
       </Stack>
-          <Footer />
-    </>
+      <Footer />
+    </div>
   )
 }
 

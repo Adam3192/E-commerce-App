@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
 import axios from 'axios'
+import Form from 'react-bootstrap/Form'
 
 export const ProductContext = createContext()
 
@@ -17,6 +18,14 @@ export const ProductProvider = (props) => {
     return axios.get('http://localhost:3001/products').then((response) => {
       setProducts(response.data)
     })
+  }
+  
+  function searchProduct(search) {
+    return axios
+      .get(`http://localhost:3001/products/?q=${search}`)
+      .then((response) => {
+        return new Promise((resolve) => resolve(response.data))
+      })
   }
 
   function getProduct(id) {
@@ -50,6 +59,20 @@ export const ProductProvider = (props) => {
       })
   }
 
+  
+  <Form className="style">
+    <Form.Group>
+      <Form.Label>Name</Form.Label>
+      <Form.Control
+        type="text"
+        name="productName"
+        placeholder="Search..."
+        // value={searchInput}
+        // onChange={handleChange}
+      />
+    </Form.Group>
+  </Form>
+
   return (
     <ProductContext.Provider
       value={{
@@ -58,6 +81,7 @@ export const ProductProvider = (props) => {
         deleteProduct,
         addProduct,
         updateProduct,
+        searchProduct
       }}
     >
       {props.children}

@@ -7,6 +7,7 @@ import ProductForm from './ProductForm'
 import Product from './Product'
 import AboutUs from './AboutUs'
 import HomeDefault from './HomeDefault'
+import SearchComponent from './SearchComponent'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path=":productId" element={<Product />} />
             <Route path="*" element={<h1>Product Not Found</h1>} />
           </Route>
+          <Route path=":search/search" element={<SearchComponent />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="new" element={<ProductForm />} />
           <Route path="edit/:productId" element={<ProductForm />} />

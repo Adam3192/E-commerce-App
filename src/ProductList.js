@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import './ProductList.css'
 import { Link, Outlet } from 'react-router-dom'
+import { CardGroup } from 'react-bootstrap'
 
 function ProductList(props) {
   let navigate = useNavigate()
@@ -22,7 +23,7 @@ function ProductList(props) {
 
     return products.map((product) => (
       <Card className="align-self-start w-25">
-        <Card.Img variant="top" src={product.image} />
+        <Card.Img className="sizeAdjust" variant="top" src={product.image} />
         <Card.Body>
           <Card.Title>{product.productName}</Card.Title>
           <Card.Text>

@@ -33,6 +33,14 @@ function ProductDetail(props) {
     fetch()
   }, [id])
 
+  useEffect(() => {
+    if (id === undefined) return
+    async function fetch() {
+      await getProduct(id).then((product) => setProduct(product))
+    }
+    fetch()
+  }, [id])
+
   return (
     <div className="test88">
       <Card className="align-self-start w-25">

@@ -3,30 +3,57 @@ module.exports = () => {
     products: [
       {
         id: 1,
-        productName: 'Clubs',
-        description: 'PING i59 Custom Irons',
+        productName: 'Driver',
+        description: 'TaylorMade 2022 Stealth Driver',
         image:
-          'https://images.unsplash.com/photo-1627307886605-309bba4cb9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZiUyMGNsdWJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-        price: 250,
-        condition: 'This item is used'
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21TYMMTYLRMD22PRMDRV?qlt=70&wid=1100&fmt=webp',
+        price: 579,
+        condition: 'This item is new',
       },
       {
         id: 2,
         productName: 'Balls',
-        description: 'Callaway 2020 Diablo Tour Golf Balls',
+        description: 'Titleist 2022 Velocity Golf Balls',
         image:
-          'https://images.unsplash.com/photo-1592592878585-abcaaaaf7cd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGdvbGYlMjBiYWxsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        price: 12,
-        condition: 'This item is used'
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21TTLU2022VLCTYXXGBL?qlt=70&wid=1100&fmt=webp',
+        price: 29,
+        condition: 'This item is new',
       },
       {
         id: 3,
         productName: 'Golf Shoes',
-        description: 'Nike Mens Air Max 270 G Golf Shoes',
+        description: 'Under Armour HOVR Matchplay Golf Shoes',
         image:
-          'https://media.istockphoto.com/photos/golf-shoes-3-picture-id157379126?b=1&k=20&m=157379126&s=170667a&w=0&h=N9euH1L7cNZKnT9MrzvG0Aia4QauBbN26IJLBIHqIgk=',
-        price: 35,
-        condition: 'This item is used'
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/20UARMHVRMTCHPLYWGSH_Grey_Black?qlt=70&wid=1100&fmt=webp',
+        price: 105,
+        condition: 'This item is new',
+      },
+      {
+        id: 4,
+        productName: 'Irons',
+        description: 'PING i525 Irons',
+        image:
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/22PNGM525STL3PWXXIRN?qlt=70&wid=1100&fmt=webp',
+        price: 1300,
+        condition: 'This item is new',
+      },
+      {
+        id: 5,
+        productName: 'Golf Tees',
+        description: 'Maxfli 3.25 Golf Tees 200-Pack',
+        image:
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/W14MXFLWHT314200-1?qlt=70&wid=1100&fmt=webp',
+        price: 15,
+        condition: 'This item is new',
+      },
+      {
+        id: 6,
+        productName: 'Golf Bag',
+        description: 'Callaway 2022 Fairway C Stand Bag',
+        image:
+          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21CWYAFRWYCSBXXXXBAG_Black_White_Golden?qlt=70&wid=1100&fmt=webp',
+        price: 229,
+        condition: 'This item is new',
       },
     ],
   }

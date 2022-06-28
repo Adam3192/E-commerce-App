@@ -6,3 +6,7 @@
  margin-bottom: 33px;
  margin-right: 33px;
 }
+
+.fullScreen {
+ height: 100vh;
+}

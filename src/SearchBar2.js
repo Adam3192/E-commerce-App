@@ -5,12 +5,13 @@ import { ProductContext } from './ProductContext'
 import { Link, Outlet } from 'react-router-dom'
 
 const SearchBar = () => {
-  let { products } = useContext(ProductContext)
+  let { products, searchProcuct } = useContext(ProductContext)
   const [searchInput, setSearchInput] = useState('')
 
   const handleChange = (e) => {
     e.preventDefault()
     setSearchInput(e.target.value)
+    searchProcuct(searchInput)
   }
 
   if (searchInput.length > 0) {
@@ -62,4 +63,5 @@ const SearchBar = () => {
   </Form>
 
 }
+
 export default SearchBar
