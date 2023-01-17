@@ -1,0 +1,18 @@
+.all-products {
+ display: grid !important;
+ grid-template-columns: repeat(3, 1fr);
+ margin-bottom: 200px;
+ gap: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+ .all-products {
+  grid-template-columns: 1fr 1fr;
+ }
+}
+
+@media only screen and (max-width: 800px) {
+ .all-products {
+  grid-template-columns: 1fr;
+ }
+}

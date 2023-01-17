@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import Stack from 'react-bootstrap/Stack'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -10,9 +10,7 @@ import './HomeDefault.css'
 function HomeDefault() {
  let navigate = useNavigate()
 
- let { getProduct, deleteProduct } = useContext(ProductContext)
- let [product, setProduct] = useState()
- let [ error, setError ] = useState()
+ let { deleteProduct } = useContext(ProductContext)
 
  function handleDeleteProduct(id) {
   deleteProduct(id)
@@ -21,7 +19,7 @@ function HomeDefault() {
 
  function productList(products) {
   if (products === null) return
-  let { id, productName, image, price } = products
+  let { id, price } = products
 
   return products.slice(0,3).map((product) => (
 
@@ -36,13 +34,13 @@ function HomeDefault() {
           <Card.Text>
             <span>{`$${product.price}`}</span>
           </Card.Text>
-          <Link to={`/view/${product.id}`} className="btn btn-secondary mx-3">
+          <Link to={`/view/${product.id}`} className="btn btn-secondary mx-2">
             View
           </Link>
-          <Link to={`/edit/${product.id}`} className="btn btn-primary mx-3">
+          <Link to={`/edit/${product.id}`} className="btn btn-primary mx-2">
             Edit
           </Link>
-          <Button variant="danger" onClick={handleDeleteProduct.bind(this, id)}>
+          <Button className=" mx-2" variant="danger" onClick={handleDeleteProduct.bind(this, id)}>
             Delete
           </Button>
         </Card.Body>
@@ -54,7 +52,7 @@ function HomeDefault() {
     <div>
       <Stack direction="vertical" gap={3}>
       <h1>Products</h1>
-      <div className='container'>
+      <div className='marginBottom container'>
           <ProductContext.Consumer>
             {({ products }) => productList(products)}
           </ProductContext.Consumer>

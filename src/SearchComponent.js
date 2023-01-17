@@ -5,72 +5,30 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom'
 import './ProductList.css'
-import { Link, Outlet, useParams } from 'react-router-dom'
-import { CardGroup } from 'react-bootstrap'
+import { Link, useParams } from 'react-router-dom'
 
 function SearchComponent(props) {
-let params = useParams();
+  let params = useParams()
 
-let navigate = useNavigate()
-let { searchProduct, deleteProduct } = useContext(ProductContext)
+  let navigate = useNavigate()
+  let { searchProduct, deleteProduct } = useContext(ProductContext)
 
-const [ products, setProducts ] = useState([]);
+  const [products, setProducts] = useState([])
 
-useEffect(() => {
+  useEffect(() => {
+    async function getProducts() {
+      await searchProduct(params.search).then((response) => {
+        setProducts(response)
+      })
+    }
 
-async function getProducts() {
- await searchProduct(params.search).then(response => {
-  setProducts(response)
- })
-}
-
-getProducts();
-
-}, [params])
-
-
+    getProducts()
+  }, [params])
 
   function handleDeleteProduct(id) {
     deleteProduct(id)
     navigate('/products')
   }
-
-  function productList(products) {
-    if (products === null) return
-
-    return products.map((product) => (
-      <Card className="align-self-start w-25">
-        <Card.Img className="sizeAdjust" variant="top" src={product.image} />
-        <Card.Body>
-          <Card.Title>{product.productName}</Card.Title>
-          <Card.Text>
-            <span>{`$${product.price}`}</span>
-          </Card.Text>
-          <Link to={`/view/${product.id}`} className="btn btn-secondary mx-3">
-            View
-          </Link>
-          <Link to={`/edit/${product.id}`} className="btn btn-primary mx-3">
-            Edit
-          </Link>
-          <Button
-            variant="danger"
-            onClick={handleDeleteProduct.bind(this, product.id)}
-          >
-            Delete
-          </Button>
-        </Card.Body>
-      </Card>
-    ))
-  }
-
-  // return (
-  //   <div>
-  //     <h1>Products</h1>
-  //       <ProductContext.Consumer>
-  //         {({ products }) => productList(products)}
-  //       </ProductContext.Consumer>
-  //   </div>
-  // )
 
   return (
     <Stack direction="vertical" gap={3}>

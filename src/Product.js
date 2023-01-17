@@ -53,7 +53,7 @@ function Product(props) {
   }
 
   function productCard() {
-    let { id, productName, description, price, photo } = product
+    let { id, productName, description, price } = product
     return (
       <Card className="align-self-start w-25">
         <Card.Body>

@@ -4,9 +4,9 @@ module.exports = () => {
       {
         id: 1,
         productName: 'Driver',
-        description: 'TaylorMade 2022 Stealth Driver',
+        description: 'PING G425 MAX Driver',
         image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21TYMMTYLRMD22PRMDRV?qlt=70&wid=1100&fmt=webp',
+          'https://images.dickssportinggoods.com/is/image/dkscdn/20PNGMG425MXDRVRXDRV_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 579,
         condition: 'This item is new',
       },
@@ -15,7 +15,7 @@ module.exports = () => {
         productName: 'Balls',
         description: 'Titleist 2022 Velocity Golf Balls',
         image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21TTLU2022VLCTYXXGBL?qlt=70&wid=1100&fmt=webp',
+          'https://images.dickssportinggoods.com/is/image/dkscdn/21TTLU2022VLCTYXXGBL_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 29,
         condition: 'This item is new',
       },
@@ -23,8 +23,7 @@ module.exports = () => {
         id: 3,
         productName: 'Golf Shoes',
         description: 'Under Armour HOVR Matchplay Golf Shoes',
-        image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/20UARMHVRMTCHPLYWGSH_Grey_Black?qlt=70&wid=1100&fmt=webp',
+        image:'https://images.dickssportinggoods.com/is/image/dkscdn/22UARMHVRDRV2WHTXGSH_White_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 105,
         condition: 'This item is new',
       },
@@ -33,7 +32,7 @@ module.exports = () => {
         productName: 'Irons',
         description: 'PING i525 Irons',
         image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/22PNGM525STL3PWXXIRN?qlt=70&wid=1100&fmt=webp',
+          'https://images.dickssportinggoods.com/is/image/dkscdn/22PNGM525STL3PWXXIRN_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 1300,
         condition: 'This item is new',
       },
@@ -42,7 +41,7 @@ module.exports = () => {
         productName: 'Golf Tees',
         description: 'Maxfli 3.25 Golf Tees 200-Pack',
         image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/W14MXFLWHT314200-1?qlt=70&wid=1100&fmt=webp',
+          'https://images.dickssportinggoods.com/is/image/dkscdn/W14MXFLNTRL314200_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 15,
         condition: 'This item is new',
       },
@@ -51,7 +50,7 @@ module.exports = () => {
         productName: 'Golf Bag',
         description: 'Callaway 2022 Fairway C Stand Bag',
         image:
-          'https://images.dickssportinggoods.com/is/image/GolfGalaxy/21CWYAFRWYCSBXXXXBAG_Black_White_Golden?qlt=70&wid=1100&fmt=webp',
+          'https://images.dickssportinggoods.com/is/image/dkscdn/21CWYAFRWY14SBXXXBAG_Hardgoods_is/?wid=252&hei=252&qlt=85,0&fmt=jpg&op_sharpen=1',
         price: 229,
         condition: 'This item is new',
       },

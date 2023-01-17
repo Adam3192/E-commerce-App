@@ -1,12 +1,7 @@
-.test22 {
- margin-left: 47vw;
-}
-
-.style {
- margin-bottom: 33px;
- margin-right: 33px;
-}
-
 .fullScreen {
  height: 100vh;
+}
+
+.marginRight {
+ margin-right: 2rem !important;
 }

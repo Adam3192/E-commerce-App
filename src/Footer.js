@@ -2,8 +2,8 @@ import './Footer.css'
 
 function Footer() {
   return (
-     <div className='footer'>
-      Adam
+     <div className='footer fixed-bottom'>
+      2022 Adam Dixon
      </div>
   )
 }

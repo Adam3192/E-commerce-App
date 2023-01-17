@@ -17,8 +17,8 @@ function ProductDetail(props) {
     price: '',
     condition: '',
   })
-  let { getProduct, deleteProduct, updateProduct } = useContext(ProductContext)
-  let { id, productName, description, price, condition, image } = product
+  let { getProduct, deleteProduct } = useContext(ProductContext)
+  let { id } = product
 
   function handleDeleteProduct(id) {
     deleteProduct(id)

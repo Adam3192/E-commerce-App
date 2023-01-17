@@ -8,7 +8,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import Footer from './Footer'
 import './Home.css'
-import SearchBar from './SearchBar'
+import Image from './Images/Ball.png'
 
 function Home() {
   let navigate = useNavigate()
@@ -16,25 +16,22 @@ function Home() {
   const handleChange = (e) => {
     if (e.target.value === '') return
     e.preventDefault()
-
-    navigate(`/${e.target.value}/search`)
+    navigate(`${e.target.value}/search`)
   }
 
   return (
-    <div className='fullScreen'>
+    <div className="fullScreen">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand className='marginRight' href="/">
             <img
               alt=""
-              src="https://images.unsplash.com/photo-1584837140804-599306fb37f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z29sZiUyMGJhbGx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              width="30"
-              height="30"
+              src={Image}
               className="d-inline-block align-top"
             />{' '}
             Dick's
           </Navbar.Brand>
-          <Nav className="me-auto test22">
+          <Nav className="me-auto">
             <Link to="/" className="nav-link">
               Home
             </Link>
@@ -49,7 +46,6 @@ function Home() {
             </Link>
           </Nav>
         </Container>
-        {/* <SearchBar /> */}
         <Form className="me-4">
           <FormControl
             onChange={handleChange}

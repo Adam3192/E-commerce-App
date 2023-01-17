@@ -1,10 +1,11 @@
 import Image from 'react-bootstrap/Image'
 import Stack from 'react-bootstrap/Stack'
+import Photo from './Images/Dicks.png'
 
 function AboutUs() {
   return (
-    <Stack direction="horizontal" gap={3}>
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2n_HKF4t_P8vsCDn0mtCxGpuAw11TyLj4VQ&usqp=CAU" />
+    <Stack className='mt-5' direction="horizontal" gap={3}>
+      <Image src= {Photo} />
       <div>
         <h1>Welcome to our Company!</h1>
         <p>
@@ -22,4 +23,3 @@ function AboutUs() {
 }
 
 export default AboutUs
-
