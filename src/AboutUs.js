@@ -9,13 +9,7 @@ function AboutUs() {
       <div>
         <h1>Welcome to our Company!</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          nulla ducimus quis provident repellendus eaque debitis nihil, magni
-          exercitationem illo sed sit quos similique officiis error id
-          voluptatum dolores aliquid adipisci asperiores. Harum facere
-          laudantium iste nihil soluta. Quibusdam rem ipsam dignissimos.
-          Necessitatibus adipisci debitis laboriosam quos pariatur tenetur
-          possimus perspiciatis in, modi voluptatem veniam.
+        Dick's Sporting Goods, Inc. is an American sporting goods retail company, based in Coraopolis, Pennsylvania. The company was established by Richard "Dick" Stack in 1948, and has approximately 854 stores and 50,100 employees. Dick's is America's largest sporting goods retailer, and it is listed on the Fortune 500.
         </p>
       </div>
     </Stack>
